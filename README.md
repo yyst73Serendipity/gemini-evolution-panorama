@@ -84,6 +84,8 @@ python3 work/build-page.py \
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
+测试夹具会以当前时间线的 `cutoff` 构造检查时间，避免官方资料更新后因固定旧日期触发误报。
+
 检查内嵌 JavaScript：
 
 ```bash

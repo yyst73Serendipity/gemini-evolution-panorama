@@ -14,7 +14,6 @@ import unittest
 from datetime import datetime
 from pathlib import Path
 from unittest.mock import patch
-from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 UPDATE_SCRIPT = ROOT / "work" / "update-gemini-panorama.py"
@@ -46,6 +45,10 @@ class AutoUpdateTests(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.temp_dir.cleanup()
+
+    def checked_at(self) -> datetime:
+        """使用当前时间线截止日构造稳定的测试检查时间。"""
+        return datetime.fromisoformat(f"{self.timeline['cutoff']}T08:30:00+08:00")
 
     def existing_events(self) -> list[dict]:
         return copy.deepcopy(self.timeline["events"][:1])
@@ -182,7 +185,7 @@ class AutoUpdateTests(unittest.TestCase):
         result = self.module.stage_update(
             paths=self.temp_paths(),
             candidates=[],
-            checked_at=datetime(2026, 10, 22, 8, 30, tzinfo=ZoneInfo("Asia/Shanghai")),
+            checked_at=self.checked_at(),
         )
         self.assertFalse(result.content_changed)
         self.assertTrue(result.checked_at_changed)
@@ -201,7 +204,7 @@ class AutoUpdateTests(unittest.TestCase):
         result = self.module.stage_update(
             paths=paths,
             candidates=[],
-            checked_at=datetime(2026, 10, 22, 8, 30, tzinfo=ZoneInfo("Asia/Shanghai")),
+            checked_at=self.checked_at(),
             next_source_state=next_state,
         )
         self.assertFalse(result.source_state_changed)
@@ -216,7 +219,7 @@ class AutoUpdateTests(unittest.TestCase):
             self.module.stage_update(
                 paths=paths,
                 candidates=[self.candidate()],
-                checked_at=datetime(2026, 10, 22, 8, 30, tzinfo=ZoneInfo("Asia/Shanghai")),
+                checked_at=self.checked_at(),
             )
         for path, content in before.items():
             self.assertEqual(path.read_bytes(), content)
@@ -226,7 +229,7 @@ class AutoUpdateTests(unittest.TestCase):
         result = self.module.stage_update(
             paths=paths,
             candidates=[self.candidate()],
-            checked_at=datetime(2026, 10, 22, 8, 30, tzinfo=ZoneInfo("Asia/Shanghai")),
+            checked_at=self.checked_at(),
         )
         before = {path: path.read_bytes() for path in (paths.timeline, paths.output, paths.changelog)}
         real_replace = os.replace
@@ -250,7 +253,7 @@ class AutoUpdateTests(unittest.TestCase):
         result = self.module.stage_update(
             paths=paths,
             candidates=[self.candidate()],
-            checked_at=datetime(2026, 10, 22, 8, 30, tzinfo=ZoneInfo("Asia/Shanghai")),
+            checked_at=self.checked_at(),
         )
         allowed = {
             "work/timeline-data.json",
