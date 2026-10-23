@@ -1,0 +1,1644 @@
+{
+  "schema_version": 1,
+  "title": "Gemini / Google AI 产品与模型演进全景",
+  "cutoff": "2026-10-22",
+  "content_updated_at": "2026-10-22T09:00:00+08:00",
+  "events": [
+    {
+      "id": "transformer-2017",
+      "date": "2017",
+      "date_precision": "year",
+      "category": "技术基础",
+      "families": [
+        "Transformer"
+      ],
+      "lifecycle": "研究",
+      "title": "Transformer 架构提出",
+      "summary": "Google 研究团队提出只依赖注意力机制、无需循环或卷积的 Transformer 架构。",
+      "difference": "相比主流循环与卷积序列模型，Transformer 把序列建模核心改为可并行计算的自注意力。",
+      "optimization": "提高训练并行度，缩短机器翻译训练时间，并增强对长距离依赖的建模能力。",
+      "availability": "论文在 NIPS 2017 公开。",
+      "significance": "该架构成为 BERT、LaMDA、PaLM、Gemini 等后续 Google 语言与多模态模型的共同技术底座。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "bert-2018"
+      ],
+      "sources": [
+        {
+          "label": "Attention Is All You Need",
+          "url": "https://research.google/pubs/attention-is-all-you-need/",
+          "grade": "A",
+          "type": "official-paper"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "bert-2018",
+      "date": "2018",
+      "date_precision": "year",
+      "category": "技术基础",
+      "families": [
+        "BERT",
+        "Transformer"
+      ],
+      "lifecycle": "研究",
+      "title": "BERT 建立双向预训练范式",
+      "summary": "BERT 使用 Transformer 编码器从未标注文本联合学习左右文语境，再以少量任务层完成微调。",
+      "difference": "相较单向语言表示，BERT 在每一层同时利用左右上下文，并以统一预训练模型适配多种语言理解任务。",
+      "optimization": "降低问答、自然语言推断等任务对专用网络结构的依赖，提升迁移学习效率和准确率。",
+      "availability": "论文于 2018 年公开，后发表于 NAACL 2019。",
+      "significance": "它验证了大规模预训练加轻量微调的通用路线，并成为 Google Search 与后续基础模型的重要前史。",
+      "importance": "major",
+      "predecessors": [
+        "transformer-2017"
+      ],
+      "successors": [
+        "lamda-2021"
+      ],
+      "sources": [
+        {
+          "label": "BERT: Pre-training of Deep Bidirectional Transformers",
+          "url": "https://research.google/pubs/bert-pre-training-of-deep-bidirectional-transformers-for-language-understanding/",
+          "grade": "A",
+          "type": "official-paper"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "lamda-2021",
+      "date": "2021-05-18",
+      "date_precision": "day",
+      "category": "研究",
+      "families": [
+        "LaMDA",
+        "Transformer"
+      ],
+      "lifecycle": "研究",
+      "title": "LaMDA 面向开放域对话",
+      "summary": "Google 发布 Language Model for Dialogue Applications 研究进展，使模型可围绕开放主题进行连贯、多轮交流。",
+      "difference": "相比面向狭窄流程的传统对话系统，LaMDA 基于 Transformer 并专门以对话数据训练，强调开放域自由流转。",
+      "optimization": "重点改进回复的合理性、具体性和趣味性，同时研究事实性、偏见与有害内容控制。",
+      "availability": "研究演示，尚非面向公众的独立产品。",
+      "significance": "LaMDA 把通用语言模型推进到自然对话交互，并直接成为 Bard 首发阶段的模型基础。",
+      "importance": "major",
+      "predecessors": [
+        "bert-2018"
+      ],
+      "successors": [
+        "palm-2022",
+        "bard-announced-2023"
+      ],
+      "sources": [
+        {
+          "label": "LaMDA: our breakthrough conversation technology",
+          "url": "https://blog.google/innovation-and-ai/products/lamda/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "palm-2022",
+      "date": "2022-04-04",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "PaLM",
+        "Pathways"
+      ],
+      "lifecycle": "研究",
+      "title": "PaLM 以 Pathways 扩展到 5400 亿参数",
+      "summary": "Google Research 发布 PaLM，使用 Pathways 在多个 TPU v4 Pod 上训练 5400 亿参数的稠密解码器模型。",
+      "difference": "相较此前单 Pod 或更小规模语言模型，PaLM 首次大规模展示跨多个 TPU Pod 的统一模型训练。",
+      "optimization": "在语言理解、少样本学习、推理和代码任务上扩大规模并提高硬件利用率，同时记录偏见与风险评估。",
+      "availability": "研究论文与技术博客公开。",
+      "significance": "PaLM 证明 Pathways 可承载超大模型训练，并为 PaLM 2 及 Gemini 之前的 Google 通用模型路线建立规模化基础。",
+      "importance": "major",
+      "predecessors": [
+        "lamda-2021"
+      ],
+      "successors": [
+        "palm-2-2023"
+      ],
+      "sources": [
+        {
+          "label": "Pathways Language Model (PaLM)",
+          "url": "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/",
+          "grade": "A",
+          "type": "official-paper"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "bard-announced-2023",
+      "date": "2023-02-06",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Bard",
+        "LaMDA"
+      ],
+      "lifecycle": "预览",
+      "title": "Bard 作为对话式 AI 服务公布",
+      "summary": "Google 公布由轻量版 LaMDA 驱动的实验性对话服务 Bard，并先向可信测试者开放。",
+      "difference": "相比 LaMDA 的研究演示，Bard 把开放域对话能力包装为可直接使用的消费级服务，并连接网页中的新鲜信息。",
+      "optimization": "以较小模型降低计算成本、扩大反馈规模，重点校验质量、安全性和现实信息的 groundedness。",
+      "availability": "先向可信测试者开放，计划随后扩大公众访问。",
+      "significance": "这是 Google 将基础模型直接转化为大众聊天产品的起点，也是后来 Gemini App 的产品前身。",
+      "importance": "major",
+      "predecessors": [
+        "lamda-2021"
+      ],
+      "successors": [
+        "bard-public-2023"
+      ],
+      "sources": [
+        {
+          "label": "An important next step on our AI journey",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/bard-google-ai-search-updates/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "bard-public-2023",
+      "date": "2023-03-21",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Bard"
+      ],
+      "lifecycle": "发布",
+      "title": "Bard 向美国和英国用户开放",
+      "summary": "Bard 从可信测试扩展到美国和英国公众候补访问，定位为与生成式 AI 协作的早期实验。",
+      "difference": "相比 2 月的封闭测试，首次建立公开反馈循环，并增加跳转 Google Search 核对信息的入口。",
+      "optimization": "通过人工反馈、评估与对话轮次护栏持续改善准确性、相关性和主题约束。",
+      "availability": "首先在美国和英国推出，随后扩展国家和语言。",
+      "significance": "Bard 从内部试验进入公开产品阶段，为后续接入 PaLM 2、Gemini 模型与移动端奠定用户基础。",
+      "importance": "standard",
+      "predecessors": [
+        "bard-announced-2023"
+      ],
+      "successors": [
+        "bard-gemini-rebrand-2024"
+      ],
+      "sources": [
+        {
+          "label": "Try Bard and share your feedback",
+          "url": "https://blog.google/innovation-and-ai/products/try-bard/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "palm-2-2023",
+      "date": "2023-05-10",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "PaLM 2"
+      ],
+      "lifecycle": "发布",
+      "title": "PaLM 2 强化多语言、推理与代码",
+      "summary": "Google 发布下一代语言模型 PaLM 2，并按 Gecko、Otter、Bison、Unicorn 提供不同规模。",
+      "difference": "相比 PaLM 单纯强调大规模，PaLM 2 更强调训练数据与架构效率，在更小尺寸下提供更强的多语言、推理和代码能力。",
+      "optimization": "覆盖一百多种语言，增加科学与数学内容、公开代码数据，并面向移动端到云端做尺寸分层。",
+      "availability": "发布时已用于 Bard 等二十多个 Google 产品和功能。",
+      "significance": "PaLM 2 是 Gemini 之前最后一代 Google 主力语言模型，并把模型能力系统性嵌入消费与企业产品。",
+      "importance": "major",
+      "predecessors": [
+        "palm-2022"
+      ],
+      "successors": [
+        "gemini-1-2023"
+      ],
+      "sources": [
+        {
+          "label": "Introducing PaLM 2",
+          "url": "https://blog.google/innovation-and-ai/products/google-palm-2-ai-large-language-model/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "notebooklm-2023",
+      "date": "2023-07-12",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "NotebookLM",
+        "Google Labs"
+      ],
+      "lifecycle": "预览",
+      "title": "NotebookLM 以用户资料为依据的 AI 笔记本",
+      "summary": "Project Tailwind 更名 NotebookLM，尝试让语言模型围绕用户上传的来源材料进行总结、提问与知识整理。",
+      "difference": "相比开放式聊天产品，NotebookLM 将回答范围锚定在用户选择的文档，强调来源依据和个人知识工作流。",
+      "optimization": "优化从大量资料到洞察的过程，减少跨文档阅读、归纳和引用定位的负担。",
+      "availability": "首先向美国少量用户开放实验访问。",
+      "significance": "它展示了长上下文和 grounded generation 在垂直产品中的价值，后来成为 Gemini 订阅计划的重要权益。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "notebooklm-gemini-3-2026"
+      ],
+      "sources": [
+        {
+          "label": "Introducing NotebookLM",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/notebooklm-google-ai/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-1-2023",
+      "date": "2023-12-06",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 1.0",
+        "Gemini"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 1.0 开启原生多模态模型家族",
+      "summary": "Google 发布 Gemini 1.0，分为 Ultra、Pro、Nano 三种尺寸，从训练起共同处理文本、代码、图像、音频与视频。",
+      "difference": "相比 PaLM 2 以语言为核心的路线，Gemini 从预训练阶段即为原生多模态，并覆盖数据中心到移动设备。",
+      "optimization": "强化跨模态推理、复杂信息理解、代码生成、训练可扩展性与端侧部署效率。",
+      "availability": "Pro 首先进入 Bard，Nano 进入 Pixel 8 Pro；Ultra 在完成进一步安全评估后推出。",
+      "significance": "它统一了 Google 的前沿模型品牌和多模态技术栈，标志 PaLM 时代转入 Gemini 时代。",
+      "importance": "major",
+      "predecessors": [
+        "palm-2-2023"
+      ],
+      "successors": [
+        "gemini-1-5-2024",
+        "gemini-safety-2023"
+      ],
+      "sources": [
+        {
+          "label": "Introducing Gemini",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Gemini 1 technical report",
+          "url": "https://deepmind.google/gemini/gemini_1_report.pdf",
+          "grade": "A",
+          "type": "official-paper"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-safety-2023",
+      "date": "2023-12-06",
+      "date_precision": "day",
+      "category": "安全治理",
+      "families": [
+        "Gemini 1.0",
+        "Responsible AI"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 1.0 建立多模态安全评估与分层防护",
+      "summary": "Google 为 Gemini 增加偏见、毒性、网络攻击、说服与自主性评估，并引入外部专家压力测试。",
+      "difference": "相比主要面向文本风险的前代模型，评估范围扩展到原生多模态输入输出和更高能力模型可能带来的新型风险。",
+      "optimization": "结合对抗测试、安全分类器、内容过滤、外部红队和发布前分阶段访问来降低误用风险。",
+      "availability": "随 Gemini 1.0 发布说明公开，Ultra 在更广泛上线前继续进行信任与安全检查。",
+      "significance": "它确立 Gemini 后续版本以模型卡、安全报告和能力分级为核心的发布治理方式。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-1-2023"
+      ],
+      "successors": [
+        "gemini-4-safety-2026"
+      ],
+      "sources": [
+        {
+          "label": "Built with responsibility and safety at the core",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+          "grade": "A",
+          "type": "official-safety-report"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-api-ai-studio-2023",
+      "date": "2023-12-13",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini API",
+        "Google AI Studio",
+        "Gemini 1.0"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini API 与 Google AI Studio 向开发者开放",
+      "summary": "Gemini Pro 和 Pro Vision 通过 Gemini API 上线，Google AI Studio 提供网页原型、API Key 与多语言 SDK。",
+      "difference": "相比仅在 Bard 和 Pixel 中体验模型，开发者首次可直接调用 Gemini，并在免费网页工具中快速测试提示和多模态输入。",
+      "optimization": "提供函数调用、嵌入、语义检索、知识 grounding、聊天接口及 Python、Android、Node.js、Swift、JavaScript SDK。",
+      "availability": "面向 180 多个国家和地区开放，免费额度内可用；企业可通过 Vertex AI 使用。",
+      "significance": "它建立了 Gemini 的公共开发者入口，并形成 AI Studio 快速试验、Vertex AI 企业部署的双平台结构。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-1-2023"
+      ],
+      "successors": [
+        "vertex-ai-gemini-2023",
+        "gemini-2-2024"
+      ],
+      "sources": [
+        {
+          "label": "Build with Gemini Pro",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-api-developers-cloud/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "vertex-ai-gemini-2023",
+      "date": "2023-12-13",
+      "date_precision": "day",
+      "category": "生态集成",
+      "families": [
+        "Vertex AI",
+        "Gemini API",
+        "Gemini 1.0"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 进入 Vertex AI 企业平台",
+      "summary": "企业可在 Vertex AI 中使用 Gemini Pro，并结合自有数据、企业安全、隐私、治理与合规能力进行定制和部署。",
+      "difference": "相比 Google AI Studio 的轻量原型体验，Vertex AI 面向受控生产环境，增加完整数据控制和云端企业治理。",
+      "optimization": "优化模型定制、受控数据接入、规模化部署与组织级安全合规。",
+      "availability": "通过 Google Cloud Vertex AI 向企业和云开发者提供。",
+      "significance": "Gemini 由单一模型 API 扩展为企业级平台能力，并成为 Google Cloud 生成式 AI 产品的核心模型层。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-api-ai-studio-2023"
+      ],
+      "successors": [
+        "vertex-ai-1-5-preview-2024",
+        "gemini-2-shutdown-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API for developers and enterprises",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-api-developers-cloud/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "bard-gemini-rebrand-2024",
+      "date": "2024-02-08",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Bard",
+        "Gemini App",
+        "Gemini 1.0 Ultra"
+      ],
+      "lifecycle": "更名",
+      "title": "Bard 更名 Gemini，并推出 Gemini Advanced 与移动应用",
+      "summary": "Google 将 Bard 统一更名为 Gemini，发布 Android 应用并在 iOS 的 Google App 中提供入口，Advanced 首发 Ultra 1.0。",
+      "difference": "相比 Bard 作为实验聊天服务，新产品直接采用模型家族名称，并形成免费版、Advanced 高阶版与移动助手体验。",
+      "optimization": "强化复杂推理、代码和创作任务，推动与 Android、Google Assistant 和跨应用操作的深度结合。",
+      "availability": "Gemini Pro 1.0 覆盖四十多种语言和二百多个国家地区；Advanced 随订阅计划推出。",
+      "significance": "品牌、模型和消费产品被统一到 Gemini 名下，确立后来 Gemini App 的产品主线。",
+      "importance": "major",
+      "predecessors": [
+        "bard-public-2023"
+      ],
+      "successors": [
+        "gemini-live-2024",
+        "gemini-canvas-2025"
+      ],
+      "sources": [
+        {
+          "label": "Bard becomes Gemini",
+          "url": "https://blog.google/intl/en-africa/products/explore-get-answers/bard-becomes-gemini-try-ultra-10-and-a-new-mobile-app-today/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "google-one-ai-premium-2024",
+      "date": "2024-02-08",
+      "date_precision": "day",
+      "category": "订阅计划",
+      "families": [
+        "Google One AI Premium",
+        "Gemini Advanced"
+      ],
+      "lifecycle": "发布",
+      "title": "Google One AI Premium 承载 Gemini Advanced",
+      "summary": "Google 以 Google One AI Premium 计划提供 Gemini Advanced、Ultra 1.0 与 2 TB 云存储，并逐步连接 Workspace 权益。",
+      "difference": "相比 Bard 时代没有独立高级订阅，该计划首次把最高能力模型访问、生产力功能与 Google One 存储打包。",
+      "optimization": "通过订阅分层提供更高模型能力和更深的 Gmail、Docs 等生产力集成。",
+      "availability": "随 Gemini 更名在支持市场向个人 Google 账户推出。",
+      "significance": "它确立 Gemini 消费级付费入口，后续于 2025 年演进为 Google AI Pro，并上方增加 Ultra 层级。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "google-ai-pro-2025",
+        "google-ai-ultra-2025"
+      ],
+      "sources": [
+        {
+          "label": "Bard becomes Gemini and Gemini Advanced",
+          "url": "https://blog.google/intl/en-africa/products/explore-get-answers/bard-becomes-gemini-try-ultra-10-and-a-new-mobile-app-today/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-1-5-2024",
+      "date": "2024-02-15",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 1.5",
+        "Gemini 1.5 Pro"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 1.5 以 MoE 和百万级上下文升级",
+      "summary": "Google 发布 Gemini 1.5 Pro，采用 Mixture-of-Experts 架构，并向部分开发者和企业预览最多一百万 token 上下文。",
+      "difference": "相比 1.0 Ultra，1.5 Pro 以中等规模和更少计算达到相近质量，同时把标准上下文扩展到 128K、实验上限至 1M。",
+      "optimization": "提高训练与服务效率，重点优化跨文本、音频、图像和视频的长上下文检索与理解。",
+      "availability": "通过 Google AI Studio 和 Vertex AI 向有限开发者及云客户私人预览。",
+      "significance": "长上下文成为 Gemini 的核心差异化能力，并直接推动 NotebookLM、长文档和大代码库场景。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-1-2023"
+      ],
+      "successors": [
+        "gemini-1-5-flash-2024",
+        "gemini-2-2024"
+      ],
+      "sources": [
+        {
+          "label": "Our next-generation model: Gemini 1.5",
+          "url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemma-1-2024",
+      "date": "2024-02-21",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemma",
+        "Gemini"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemma 开放模型家族发布",
+      "summary": "Google 发布由 Gemini 同源研究和技术构建的 Gemma 2B 与 7B 开放权重模型，以及负责任生成式 AI 工具包。",
+      "difference": "相比闭源托管的 Gemini，Gemma 可下载权重、在笔记本或工作站本地运行，并允许负责任的商业使用和再分发。",
+      "optimization": "针对多类 GPU、TPU 和本地硬件优化部署效率，同时提供预训练与指令微调版本。",
+      "availability": "可通过 Kaggle、Hugging Face、Vertex AI、GKE 和本地工具获取。",
+      "significance": "Gemma 建立 Google 的开放模型支线，把 Gemini 研究成果扩展到本地、教育、研究和定制部署。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "gemma-4-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemma open models",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-code-assist-2024",
+      "date": "2024-04-09",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini Code Assist",
+        "Google Cloud"
+      ],
+      "lifecycle": "更名",
+      "title": "Duet AI for Developers 演进为 Gemini Code Assist",
+      "summary": "Google Cloud 发布 Gemini Code Assist，以 Gemini 模型为 VS Code、JetBrains、Cloud Shell 和企业代码库提供编程协助。",
+      "difference": "相比 Duet AI for Developers，新版本采用 Gemini 模型，并增加跨私有代码库的企业上下文理解和代码转换能力。",
+      "optimization": "优化代码生成、解释、测试、故障排查和大规模代码库修改，同时保留企业安全、隐私与合规控制。",
+      "availability": "在 Google Cloud Next 2024 发布，面向个人试用及企业许可。",
+      "significance": "它把 Gemini 从通用 API 延伸到完整软件开发生命周期，并成为 Gemini CLI 的共享技术基础。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "gemini-cli-2025"
+      ],
+      "sources": [
+        {
+          "label": "Powering Google Cloud with Gemini",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-google-cloud-is-here",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "vertex-ai-1-5-preview-2024",
+      "date": "2024-04-09",
+      "date_precision": "day",
+      "category": "生态集成",
+      "families": [
+        "Vertex AI",
+        "Gemini 1.5 Pro"
+      ],
+      "lifecycle": "升级",
+      "title": "Gemini 1.5 Pro 进入 Vertex AI 公共预览",
+      "summary": "Google Cloud 将 Gemini 1.5 Pro 在 Vertex AI 中转为公共预览，并加入更多 grounding 与企业数据连接能力。",
+      "difference": "相比此前有限预览，更多云客户可在统一平台试用长上下文模型，并将输出连接到可验证来源。",
+      "optimization": "重点优化企业级长文档处理、来源 grounding、模型定制和受控生产实验。",
+      "availability": "Google Cloud 客户和开发者可在 Vertex AI 公共预览中使用。",
+      "significance": "这一步将 Gemini 1.5 的百万级上下文从研究亮点推进到企业开发流程。",
+      "importance": "standard",
+      "predecessors": [
+        "vertex-ai-gemini-2023"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google Cloud Next 2024 Gemini updates",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/google-cloud-next-2024-generative-ai-gemini/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-1-5-flash-2024",
+      "date": "2024-05-14",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 1.5 Flash",
+        "Gemini 1.5 Pro"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 1.5 Flash 面向速度、成本与规模",
+      "summary": "Google 推出由 1.5 Pro 蒸馏而来的轻量模型 1.5 Flash，并将 Pro 与 Flash 的一百万 token 上下文开放公共预览。",
+      "difference": "相比 1.5 Pro，Flash 以更低延迟和服务成本处理高频大规模任务，同时保留多模态推理和长上下文。",
+      "optimization": "重点优化摘要、聊天、图像视频描述、长文档表格抽取，以及 1.5 Pro 的代码、规划和多轮对话能力。",
+      "availability": "Google AI Studio 与 Vertex AI 公共预览；1.5 Pro 的两百万上下文通过候补名单开放。",
+      "significance": "Flash 建立了 Gemini 后续每代兼顾高能力 Pro 与高吞吐 Flash 的产品分层。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-1-5-2024"
+      ],
+      "successors": [
+        "gemini-2-2024"
+      ],
+      "sources": [
+        {
+          "label": "Gemini 1.5 Flash and model updates",
+          "url": "https://blog.google/innovation-and-ai/products/google-gemini-update-flash-ai-assistant-io-2024/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "project-astra-2024",
+      "date": "2024-05-14",
+      "date_precision": "day",
+      "category": "研究",
+      "families": [
+        "Project Astra",
+        "Gemini"
+      ],
+      "lifecycle": "研究",
+      "title": "Project Astra 展示通用 AI 助手原型",
+      "summary": "Google DeepMind 展示 Project Astra，使代理可实时理解摄像头与语音、记住上下文并对动态环境作出回应。",
+      "difference": "相比以提示框为中心的 Gemini App，Astra 面向持续感知、低延迟对话、记忆和跨模态行动的通用助手形态。",
+      "optimization": "优化视频帧连续处理、语音交互延迟、场景记忆与现实环境中的上下文理解。",
+      "availability": "作为研究原型向受控演示和测试者展示，能力随后逐步进入 Gemini 产品。",
+      "significance": "它把 Gemini 路线从回答问题推进到持续感知和执行任务的通用智能体。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "gemini-2-2024"
+      ],
+      "sources": [
+        {
+          "label": "Gemini updates and Project Astra",
+          "url": "https://blog.google/innovation-and-ai/products/google-gemini-update-flash-ai-assistant-io-2024/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-live-2024",
+      "date": "2024-08-13",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Gemini Live",
+        "Gemini App",
+        "Android"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini Live 推出自然连续语音对话",
+      "summary": "Gemini Live 在移动端提供可打断、可后台继续的自由流动语音对话，并加强 Android 屏幕和应用上下文。",
+      "difference": "相比文字聊天和传统语音助手，Live 支持更自然的多轮口语交流、十种声音以及锁屏或后台持续对话。",
+      "optimization": "优化移动端低摩擦交流、上下文感知和与 Keep、Tasks、Calendar 等 Google 应用的连接。",
+      "availability": "首先向 Gemini Advanced 订阅者推出，并从 Android 扩展到更多设备和平台。",
+      "significance": "它将 Project Astra 式实时交互逐步产品化，使 Gemini 成为移动系统级助手。",
+      "importance": "major",
+      "predecessors": [
+        "bard-gemini-rebrand-2024"
+      ],
+      "successors": [
+        "gemini-4-app-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini makes your mobile device a powerful AI assistant",
+          "url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "deep-research-2024",
+      "date": "2024-12-11",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Deep Research",
+        "Gemini App",
+        "Gemini 1.5 Pro"
+      ],
+      "lifecycle": "发布",
+      "title": "Deep Research 成为 Gemini 的代理式研究功能",
+      "summary": "Gemini Advanced 推出 Deep Research，可自行规划网页检索、探索复杂主题并汇总成带结构的长篇报告。",
+      "difference": "相比一次性问答，Deep Research 将问题拆分为研究计划并迭代浏览多个来源，形成较完整的综合分析。",
+      "optimization": "利用长上下文与高级推理降低资料搜索、筛选和跨来源整合的时间成本。",
+      "availability": "首先在 Gemini Advanced 网页端推出，随后扩展语言、平台和免费层。",
+      "significance": "它是 Gemini App 从聊天助手转向可代理完成长任务的重要节点。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "deep-research-max-2026"
+      ],
+      "sources": [
+        {
+          "label": "Try Deep Research",
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-2-2024",
+      "date": "2024-12-11",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 2.0",
+        "Gemini 2.0 Flash"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 2.0 面向智能体时代",
+      "summary": "Google 发布 Gemini 2.0 Flash 实验版，加入原生图像与音频输出、实时多模态 API 和原生工具调用。",
+      "difference": "相比 1.5 代重点解决多模态理解与长上下文，2.0 把规划、行动、工具使用和多模态输出整合进模型。",
+      "optimization": "在保持低延迟的同时增强代码、指令遵循、规划、函数调用、Google Search 与代码执行等工具能力。",
+      "availability": "实验版向 Gemini 用户、AI Studio 与 Vertex AI 开发者开放，部分生成能力先给早期伙伴。",
+      "significance": "Gemini 从信息理解模型迈向可监督执行多步任务的智能体基础，并催生 Astra、Mariner、Jules 等项目。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-1-5-2024",
+        "gemini-1-5-flash-2024",
+        "project-astra-2024"
+      ],
+      "successors": [
+        "gemini-2-5-2025",
+        "gemini-2-shutdown-2026"
+      ],
+      "sources": [
+        {
+          "label": "Introducing Gemini 2.0",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-canvas-2025",
+      "date": "2025-03-18",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Canvas",
+        "Gemini App",
+        "Audio Overview"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini Canvas 提供文档与代码协作空间",
+      "summary": "Gemini App 推出 Canvas，用于实时生成、编辑、预览和分享文档或代码，并加入文件转播客式 Audio Overview。",
+      "difference": "相比单轮聊天输出，Canvas 提供持续可编辑的工作区和网页原型预览，用户可局部修改并导出到 Google Docs。",
+      "optimization": "优化长文写作、代码迭代、可视化预览和内容复用，减少在聊天、编辑器与预览工具间切换。",
+      "availability": "向 Gemini 与 Gemini Advanced 用户全球推出，覆盖 Gemini Apps 支持的语言。",
+      "significance": "Gemini App 从聊天界面扩展为可持续创作和原型开发的工作台。",
+      "importance": "major",
+      "predecessors": [
+        "bard-gemini-rebrand-2024"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "New ways to collaborate and get creative with Gemini",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-2-5-2025",
+      "date": "2025-03-25",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 2.5",
+        "Gemini 2.5 Pro"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 2.5 将思考能力内建到模型",
+      "summary": "Google 发布 Gemini 2.5 Pro Experimental，把推理过程作为模型默认能力，并强化复杂问题与代码任务。",
+      "difference": "相比 2.0 的实验性 Thinking 路线，2.5 将增强基础模型和后训练结合，使思考能力成为整个模型家族的核心设计。",
+      "optimization": "重点提升数学、科学、编码、多模态理解和复杂上下文推理，同时保留一百万 token 上下文。",
+      "availability": "Google AI Studio 与 Gemini Advanced 首发，随后进入 Vertex AI 并提供生产定价。",
+      "significance": "2.5 奠定后续 Gemini 3 与 4 的推理和智能体能力基线，并成为 2025 年开发者主力模型家族。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-2-2024"
+      ],
+      "successors": [
+        "gemini-2-5-ga-2025",
+        "gemini-3-2025"
+      ],
+      "sources": [
+        {
+          "label": "Gemini 2.5: Our most intelligent AI model",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "google-ai-pro-2025",
+      "date": "2025-05-20",
+      "date_precision": "day",
+      "category": "订阅计划",
+      "families": [
+        "Google AI Pro",
+        "Google One AI Premium"
+      ],
+      "lifecycle": "更名",
+      "title": "AI Premium 更名 Google AI Pro",
+      "summary": "Google 将原有 AI Premium 计划统一为 Google AI Pro，并扩充 Gemini、Flow、NotebookLM 与开发者工具权益。",
+      "difference": "相比 Google One AI Premium 主要围绕 Gemini Advanced 与存储，Pro 以 Google AI 品牌覆盖更多创作、研究和开发产品。",
+      "optimization": "优化个人订阅的产品组合与权益表达，并用更高模型额度连接 Gemini App、Workspace、NotebookLM 和 Flow。",
+      "availability": "面向个人 Google 账户在支持国家和地区推出，价格与权益按地区显示。",
+      "significance": "更名使订阅品牌不再绑定单一 Google One 存储叙事，并为 Ultra 形成清晰的上下层级。",
+      "importance": "major",
+      "predecessors": [
+        "google-one-ai-premium-2024"
+      ],
+      "successors": [
+        "google-ai-ultra-2025"
+      ],
+      "sources": [
+        {
+          "label": "Google AI announcements from May 2025",
+          "url": "https://blog.google/innovation-and-ai/products/google-ai-updates-may-2025/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Google AI plans",
+          "url": "https://one.google.com/intl/en/about/google-ai-plans/",
+          "grade": "A",
+          "type": "official-plan"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "google-ai-ultra-2025",
+      "date": "2025-05-20",
+      "date_precision": "day",
+      "category": "订阅计划",
+      "families": [
+        "Google AI Ultra",
+        "Google AI Pro"
+      ],
+      "lifecycle": "发布",
+      "title": "Google AI Ultra 增加最高订阅层级",
+      "summary": "Google 发布 Google AI Ultra，提供最高 Gemini 使用额度、前沿模型和功能优先访问，以及 Flow、NotebookLM 等高阶权益。",
+      "difference": "相比 Pro，Ultra 面向重度专业用户，提供最高限额、Deep Think 等早期能力以及更高创作和智能体资源。",
+      "optimization": "以单一订阅聚合前沿推理、视频生成、研究、开发者与云存储权益，并按能力稀缺程度分层访问。",
+      "availability": "首先在美国以每月 249.99 美元推出，随后扩展到更多国家和地区。",
+      "significance": "Ultra 将模型发布、实验功能和订阅分层直接联动，成为前沿 Gemini 能力的主要消费级入口。",
+      "importance": "major",
+      "predecessors": [
+        "google-one-ai-premium-2024",
+        "google-ai-pro-2025"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Introducing Google AI Ultra",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-ultra/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Google AI plans",
+          "url": "https://one.google.com/intl/en/about/google-ai-plans/",
+          "grade": "A",
+          "type": "official-plan"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "jules-public-2025",
+      "date": "2025-05-20",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Jules",
+        "Gemini 2.5"
+      ],
+      "lifecycle": "预览",
+      "title": "Jules 异步编码代理向更多开发者开放",
+      "summary": "Google 在 I/O 2025 将 Jules 面向公众开放，使其可异步读取代码库、制定计划并在云端完成开发任务。",
+      "difference": "相比 IDE 内同步补全，Jules 以后台代理方式克隆仓库、执行多步任务并交付可审查的代码修改。",
+      "optimization": "重点优化任务并行、计划透明度、GitHub 工作流和减少开发者等待时间。",
+      "availability": "2025 年 5 月进入公开测试，8 月正式结束 beta 并面向所有人推出。",
+      "significance": "Jules 标志 Google 编程产品从代码辅助迈向可委派、异步执行的工程代理。",
+      "importance": "major",
+      "predecessors": [],
+      "successors": [
+        "gemini-cli-2025"
+      ],
+      "sources": [
+        {
+          "label": "Google AI developer updates at I/O 2025",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-developer-updates-io-2025/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Jules now available",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/jules-now-available/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-2-5-ga-2025",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "category": "生命周期",
+      "families": [
+        "Gemini 2.5 Pro",
+        "Gemini 2.5 Flash",
+        "Gemini API"
+      ],
+      "lifecycle": "升级",
+      "title": "Gemini 2.5 Pro 与 Flash 转为稳定生产版本",
+      "summary": "Google 将 Gemini 2.5 Pro 和 Flash 推进为稳定、可生产使用的模型，并预览更低成本的 Flash-Lite。",
+      "difference": "相比 3 月实验版，稳定模型提供固定端点和生产生命周期，开发者不再依赖短期 preview 型号。",
+      "optimization": "统一思考能力与成本控制，覆盖高复杂度 Pro、高吞吐 Flash 和低成本 Flash-Lite 三档。",
+      "availability": "通过 Gemini API、Google AI Studio 与 Vertex AI 面向开发者和企业提供。",
+      "significance": "这一节点把 2.5 从能力展示转化为可长期部署的主力 API 家族。",
+      "importance": "standard",
+      "predecessors": [
+        "gemini-2-5-2025"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Gemini 2.5 model family updates",
+          "url": "https://developers.googleblog.com/en/gemini-2-5-thinking-model-updates/",
+          "grade": "B",
+          "type": "official-developer-post"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-cli-2025",
+      "date": "2025-06-25",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini CLI",
+        "Gemini Code Assist",
+        "Gemini 2.5 Pro"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini CLI 将开源 AI 代理带入终端",
+      "summary": "Google 发布开源 Gemini CLI，支持在终端中理解和修改文件、执行命令、联网检索、使用 MCP 与自动化脚本。",
+      "difference": "相比 Gemini Code Assist 主要运行在 IDE，CLI 提供可检查源码的本地代理入口，并支持非交互调用和终端工作流。",
+      "optimization": "内置文件操作、命令执行、Search grounding、MCP、扩展和人类监督，并共享 Code Assist 的代理技术。",
+      "availability": "预览期个人 Google 账户可免费使用 Gemini 2.5 Pro，也支持 AI Studio 或 Vertex AI Key。",
+      "significance": "它补齐 Google 在命令行编码代理领域的产品形态，并把 Gemini 开发工具扩展到自动化与开放生态。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-code-assist-2024",
+        "jules-public-2025"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Gemini CLI: your open-source AI agent",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-cli-open-source-ai-agent/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-3-2025",
+      "date": "2025-11-18",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 3",
+        "Gemini 3 Pro",
+        "Gemini 3 Deep Think"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 3 合并前代多模态、推理与智能体能力",
+      "summary": "Google 发布 Gemini 3 Pro 预览版与 Deep Think，强调更深的多模态推理、交互式生成、代理编程和复杂任务执行。",
+      "difference": "相比 2.5 Pro，Gemini 3 在主要基准上进一步提升，并把更强核心推理用于 Gemini App、Search、API、CLI 和企业平台。",
+      "optimization": "重点优化事实准确性、复杂视觉理解、生成式界面、智能体编码、抗提示注入和降低迎合式回答。",
+      "availability": "首日进入 Gemini App、AI Mode、Gemini API、AI Studio、Antigravity、Gemini CLI、Vertex AI 与企业产品。",
+      "significance": "它将模型、搜索、消费助手和开发平台同步发布，形成 Google 全栈 Gemini 分发模式。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-2-5-2025"
+      ],
+      "successors": [
+        "gemini-3-1-pro-2026",
+        "gemini-4-argon-2026"
+      ],
+      "sources": [
+        {
+          "label": "Introducing Gemini 3",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Gemini 3 launch details",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-3-1-pro-2026",
+      "date": "2026-02-19",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 3.1 Pro",
+        "Gemini 3"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini 3.1 Pro 升级复杂问题核心推理",
+      "summary": "Google 推出 Gemini 3.1 Pro 预览版，并同步进入 API、Vertex AI、Gemini App、NotebookLM、CLI 与 Antigravity。",
+      "difference": "相比 Gemini 3 Pro，3.1 Pro 作为更强的通用推理基线，在 ARC-AGI-2 上的官方验证分数超过前代两倍。",
+      "optimization": "重点改进复杂系统综合、可视化解释、创意编码和长程智能体工作流。",
+      "availability": "开发者、企业与消费者通过主要 Gemini 平台获得预览访问，Pro 与 Ultra 用户有更高额度。",
+      "significance": "它体现 Gemini 3 系列以小版本快速升级核心智能，并跨产品同步替换底层模型的节奏。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-3-2025"
+      ],
+      "successors": [
+        "gemini-3-6-flash-2026",
+        "gemini-4-argon-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini 3.1 Pro",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "notebooklm-gemini-3-2026",
+      "date": "2026-02-19",
+      "date_precision": "day",
+      "category": "生态集成",
+      "families": [
+        "NotebookLM",
+        "Gemini 3.1 Pro"
+      ],
+      "lifecycle": "升级",
+      "title": "NotebookLM 接入 Gemini 3.1 Pro",
+      "summary": "NotebookLM 为 Pro 与 Ultra 用户接入 Gemini 3.1 Pro，将更强核心推理用于资料综合和复杂解释。",
+      "difference": "相比早期以来源 grounding 为核心的 NotebookLM，升级增加更强跨来源推理并与 Gemini 订阅层级直接联动。",
+      "optimization": "优化多文档综合、复杂主题解释与专业研究工作流，同时保持以用户来源为依据。",
+      "availability": "Google AI Pro 与 Ultra 用户开始获得访问。",
+      "significance": "NotebookLM 从实验性 AI 笔记本演进为订阅生态中的高阶研究产品。",
+      "importance": "standard",
+      "predecessors": [
+        "notebooklm-2023"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Gemini 3.1 Pro rollout",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemma-4-2026",
+      "date": "2026-04-02",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemma 4",
+        "Gemma"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemma 4 面向本地推理与智能体工作流",
+      "summary": "Google DeepMind 发布 Gemma 4，提供面向移动和 IoT 的 E2B/E4B，以及面向个人电脑高级推理的 12B、26B、31B。",
+      "difference": "相比 Gemma 3，Gemma 4 增加面向智能体与思考的模型分层，并将音频、视觉和离线实时处理扩展到更小设备。",
+      "optimization": "优化每字节能力、内存与计算效率，使高级推理可在消费级 GPU、本地工作站和边缘设备运行。",
+      "availability": "开放权重可通过官方模型渠道下载，并可在 Google AI Studio 与本地运行生态中使用。",
+      "significance": "Gemma 支线从轻量开放语言模型发展为覆盖边缘多模态与本地智能体的完整家族。",
+      "importance": "major",
+      "predecessors": [
+        "gemma-1-2024"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Introducing Gemma 4",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+          "grade": "A",
+          "type": "official-announcement"
+        },
+        {
+          "label": "Gemma 4 model card",
+          "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+          "grade": "A",
+          "type": "model-card"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "deep-research-max-2026",
+      "date": "2026-04-21",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Deep Research Max",
+        "Deep Research",
+        "Gemini 3.1 Pro"
+      ],
+      "lifecycle": "升级",
+      "title": "Deep Research Max 扩展为开发者级研究代理",
+      "summary": "Google 发布新版 Deep Research 与 Deep Research Max，加入 MCP、原生可视化和连接私有数据的长程研究流程。",
+      "difference": "相比 2024 年 Gemini App 内的研究功能，新版本通过 API 提供速度优先与最高质量两档代理，并支持企业数据流。",
+      "optimization": "优化延迟、成本、分析深度、图表生成和开放网页与专有数据的联合检索。",
+      "availability": "通过 Interactions API 面向开发者提供，适配金融、生命科学和市场研究等工作流。",
+      "significance": "Deep Research 从消费功能演进为可嵌入企业代理管线的通用研究组件。",
+      "importance": "major",
+      "predecessors": [
+        "deep-research-2024"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Deep Research Max",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-2-shutdown-2026",
+      "date": "2026-06-01",
+      "date_precision": "day",
+      "category": "生命周期",
+      "families": [
+        "Gemini 2.0 Flash",
+        "Gemini API",
+        "Vertex AI"
+      ],
+      "lifecycle": "弃用",
+      "title": "Gemini 2.0 Flash API 型号停止服务",
+      "summary": "Gemini API 关闭 gemini-2.0-flash 与 flash-lite 稳定型号，并要求迁移到 Gemini 3.x 的 Flash 或 Flash-Lite。",
+      "difference": "相比仅发布新版本，官方生命周期机制明确给出停服日期、替代型号和模型字符串迁移要求。",
+      "optimization": "通过替代模型表、明确停服日期和发布说明减少旧端点长期并存，让团队能够提前完成模型字符串与行为兼容性迁移。",
+      "availability": "自 2026 年 6 月 1 日起相关 Gemini API 请求不再由 2.0 Flash 型号提供服务。",
+      "significance": "这标志 Gemini API 进入快速代际轮换阶段，开发者必须把模型生命周期管理纳入生产流程。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-2-2024",
+        "vertex-ai-gemini-2023"
+      ],
+      "successors": [
+        "gemini-3-6-flash-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API deprecations",
+          "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+          "grade": "A",
+          "type": "official-documentation"
+        },
+        {
+          "label": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "grade": "A",
+          "type": "official-documentation"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-omni-flash-2026",
+      "date": "2026-06-30",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini Omni Flash",
+        "Gemini API",
+        "Google AI Studio"
+      ],
+      "lifecycle": "预览",
+      "title": "Gemini Omni Flash 原生生成与编辑视频",
+      "summary": "Google 将 Gemini Omni Flash 以公开预览带入 Gemini API 与 Google AI Studio，统一理解、生成和对话式编辑视频。",
+      "difference": "相比此前模型主要理解视频或调用独立生成模型，Omni Flash 原生接收文本、图像、视频组合并输出高质量视频。",
+      "optimization": "优化高吞吐视频生成、迭代式对话编辑和多模态创作工作流的成本与速度。",
+      "availability": "以 gemini-omni-flash-preview 向开发者公开预览。",
+      "significance": "它扩展了 Gemini 原生多模态的含义，使模型从理解和文本输出进一步进入可编辑的动态媒体生成。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-3-1-pro-2026"
+      ],
+      "successors": [
+        "gemini-omni-flash-ga-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini Omni Flash",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-3-6-flash-2026",
+      "date": "2026-07-21",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 3.6 Flash",
+        "Gemini 3.5 Flash-Lite"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 3.6 Flash 与 3.5 Flash-Lite 转为稳定版本",
+      "summary": "Gemini API 发布生产就绪的 Gemini 3.6 Flash 与 3.5 Flash-Lite，分别覆盖高能力工作模型和低成本子代理。",
+      "difference": "相比 3.5 Flash，3.6 Flash 改善 token 效率、代码和代理规划并降低价格；Flash-Lite 面向高频低延迟自动化。",
+      "optimization": "重点减少输出冗长、改善成本可控性，并为多代理系统提供不同能力与价格档位。",
+      "availability": "通过 Gemini API 与 Google AI Studio 提供稳定型号。",
+      "significance": "它承接 2.0 Flash 停服后的迁移路径，并形成 3.x 系列的稳定生产基线。",
+      "importance": "standard",
+      "predecessors": [
+        "gemini-3-1-pro-2026",
+        "gemini-2-shutdown-2026"
+      ],
+      "successors": [
+        "gemini-3-8-flash-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "grade": "A",
+          "type": "official-documentation"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-omni-flash-ga-2026",
+      "date": "2026-08-27",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini Omni 1.1 Flash",
+        "Gemini Omni Flash",
+        "Gemini API"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini Omni 1.1 Flash 转为稳定视频生成模型",
+      "summary": "Google 将 Gemini Omni Flash 推进到正式可用的 gemini-omni-1.1-flash，增加视频延展、首尾帧插值和分辨率控制。",
+      "difference": "相比 6 月公开预览，正式版从基础短视频生成与对话编辑扩展到续写现有视频、两帧插值，并提供 360p 至 4K 的输出控制。",
+      "optimization": "重点提升生产可用性、编辑连续性、构图控制和输出规格选择，并以稳定模型字符串替代预览端点。",
+      "availability": "自 2026 年 8 月 27 日通过 Gemini API 正式提供；预览端点随后进入弃用流程。",
+      "significance": "该节点把 Gemini 原生视频生成从实验能力推进为可纳入生产流程的稳定多模态模型。",
+      "importance": "standard",
+      "predecessors": [
+        "gemini-omni-flash-2026"
+      ],
+      "successors": [
+        "gemini-4-argon-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "grade": "A",
+          "type": "official-documentation"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-3-8-flash-2026",
+      "date": "2026-09-02",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 3.8 Flash",
+        "Gemini 3.8 Flash Cyber"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 3.8 Flash 强化长程代理与网络防御",
+      "summary": "Google 发布 3.8 Flash 与受控开放的 3.8 Flash Cyber，在保持 3.7 速度和首发价格的同时提高推理与编码能力。",
+      "difference": "相比 3.7 Flash，新版本显著提升软件工程、多步专业推理和长期智能体任务，并加入专门的网络安全变体。",
+      "optimization": "通过长运行代理循环、自我评估改进和网络安全训练，提高漏洞发现、自动修复与抗提示注入能力。",
+      "availability": "Flash 面向开发者、企业及 Pro/Ultra 用户；Cyber 通过 Fairwind Program 向可信防御者开放。",
+      "significance": "它把低成本 Flash 路线推进到长程软件工程和高风险专业代理，并为 Argon 的网络防御能力铺路。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-3-6-flash-2026"
+      ],
+      "successors": [
+        "gemini-4-argon-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini 3.8 Flash and Flash Cyber",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-3-deprecations-2026",
+      "date": "2026-10-08",
+      "date_precision": "day",
+      "category": "生命周期",
+      "families": [
+        "Gemini 3.7 Flash",
+        "Gemini 3.5 Flash",
+        "Gemini API"
+      ],
+      "lifecycle": "迁移",
+      "title": "Gemini API 将 3.7 Flash 与 3.5 Flash 自动迁移",
+      "summary": "Google 宣布 3.7 Flash 由 3.8 Flash 替代、3.5 Flash 由 3.6 Flash 替代，并从 AI Studio 选择器移除旧型号。",
+      "difference": "相比 2.0 代直接停服，部分 3.x 快速迭代型号先通过 API 自动路由到后继版本，降低即时中断风险。",
+      "optimization": "统一开发者模型入口，减少相邻小版本并存，同时要求应用更新明确模型字符串并复核行为差异。",
+      "availability": "自公告起在 Google AI Studio 和 Gemini API 生效。",
+      "significance": "这体现 3.x 时代更高频的小版本迭代，也提醒生产系统不能长期依赖 latest 或隐式路由。",
+      "importance": "standard",
+      "predecessors": [
+        "gemini-3-8-flash-2026"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "grade": "A",
+          "type": "official-documentation"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-4-app-2026",
+      "date": "2026-10-13",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Gemini 4 Argon",
+        "Gemini App",
+        "Google Antigravity"
+      ],
+      "lifecycle": "升级",
+      "title": "Gemini 4 Argon 进入 Gemini App 与任务模式",
+      "summary": "Gemini App 向 Google AI Pro 与 Ultra 用户开放 Argon，并增加更直接回答、长任务进度反馈和聊天到 Antigravity 编码的切换。",
+      "difference": "相比此前以聊天和单项工具为中心，Argon 版 Gemini 可切换 Tasks 后在用户离线时持续工作，并连接四十多个应用。",
+      "optimization": "优化复杂任务持续执行、编码协作、跨应用操作、进度可见性以及减少重复和含糊回答。",
+      "availability": "Google AI Pro 与 Ultra 订阅者自发布日起开始获得访问。",
+      "significance": "Gemini App 从多模态助手进一步演进为可委派长任务、跨应用执行和编码协作的代理入口。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-live-2024",
+        "gemini-4-argon-2026"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Gemini 4 Argon comes to the Gemini app",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-4-argon-2026",
+      "date": "2026-10-13",
+      "date_precision": "day",
+      "category": "模型",
+      "families": [
+        "Gemini 4 Argon",
+        "Gemini 4"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 4 Argon 面向复杂真实世界工作流",
+      "summary": "Google 发布 Gemini 4 Argon，主攻长程软件工程、企业知识工作、网络防御以及科学、金融和法律等复杂任务。",
+      "difference": "相比 Gemini 3.1 Pro 与 3.8 Flash，Argon 提升多步任务持续性、结构精度和跨工具执行，并成为新一代前沿模型。",
+      "optimization": "重点优化大型代码迁移、复杂证据综合、长期代理循环、科学发现、漏洞修复与抗间接提示注入。",
+      "availability": "全球向开发者和企业通过 Gemini API 提供，并进入 Gemini App、AI Mode、AI Studio 与 Antigravity 的相应订阅层级。",
+      "significance": "它开启 Gemini 4 代，并把前沿推理从基准能力转向可持续执行高价值真实工作。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-3-2025",
+        "gemini-3-1-pro-2026",
+        "gemini-omni-flash-ga-2026",
+        "gemini-3-8-flash-2026"
+      ],
+      "successors": [
+        "gemini-4-safety-2026",
+        "gemini-4-app-2026"
+      ],
+      "sources": [
+        {
+          "label": "Gemini 4 Argon model page",
+          "url": "https://deepmind.google/models/gemini/",
+          "grade": "A",
+          "type": "official-model-page"
+        },
+        {
+          "label": "Gemini 4 Argon for developers",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+          "grade": "A",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    },
+    {
+      "id": "gemini-4-safety-2026",
+      "date": "2026-10-13",
+      "date_precision": "day",
+      "category": "安全治理",
+      "families": [
+        "Gemini 4 Argon",
+        "Frontier Safety Framework",
+        "Fairwind Program"
+      ],
+      "lifecycle": "发布",
+      "title": "Gemini 4 Argon 扩展前沿安全与实时监测",
+      "summary": "Google 为 Argon 发布安全与安全性说明，覆盖网络和生物误用、代理越权、间接提示注入与实时失配监测。",
+      "difference": "相比 Gemini 1.0 的通用多模态安全评估，Argon 针对更强代理和网络能力引入分阶段防御者访问、领域护栏和运行时检查。",
+      "optimization": "通过 Frontier Safety Framework、外部红队、Fairwind 可信防御者计划和实时边界监测降低高风险能力误用。",
+      "availability": "随 2026 年 10 月 13 日广泛发布同步公开安全报告与模型卡。",
+      "significance": "该治理方案表明前沿模型发布已从静态内容过滤升级为能力评估、访问控制与运行时监控的纵深防御。",
+      "importance": "major",
+      "predecessors": [
+        "gemini-safety-2023",
+        "gemini-4-argon-2026"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Developing Gemini 4 Argon responsibly and safely",
+          "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+          "grade": "A",
+          "type": "official-safety-report"
+        },
+        {
+          "label": "Gemini model cards",
+          "url": "https://deepmind.google/models/model-cards/",
+          "grade": "A",
+          "type": "model-card"
+        }
+      ],
+      "first_seen_at": "2026-10-22T09:00:00+08:00",
+      "verified_at": "2026-10-22T09:00:00+08:00",
+      "auto_generated": false,
+      "verification": "人工核验"
+    }
+  ]
+}

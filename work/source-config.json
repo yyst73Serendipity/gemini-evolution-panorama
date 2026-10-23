@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "user_agent": "gemini-evolution-panorama/1.0 (+https://github.com/yyst73Serendipity/gemini-evolution-panorama)",
+  "timeout_seconds": 30,
+  "sources": [
+    {
+      "name": "gemini-api-changelog",
+      "label": "Gemini API 更新日志",
+      "type": "release_notes",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "required": true,
+      "grade": "A",
+      "path_prefixes": [
+        "/gemini-api/docs/"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "API"
+      ]
+    },
+    {
+      "name": "vertex-ai-release-notes",
+      "label": "Vertex AI 生成式 AI 发布说明",
+      "type": "release_notes",
+      "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
+      "required": true,
+      "grade": "A",
+      "path_prefixes": [
+        "/vertex-ai/generative-ai/"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "Vertex AI"
+      ]
+    },
+    {
+      "name": "deepmind-model-cards",
+      "label": "Google DeepMind 模型卡",
+      "type": "listing",
+      "url": "https://deepmind.google/models/model-cards/",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/models/"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "Gemma"
+      ]
+    },
+    {
+      "name": "google-blog-gemini",
+      "label": "Google Blog Gemini 专题",
+      "type": "listing",
+      "url": "https://blog.google/products-and-platforms/products/gemini/",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/products/gemini/",
+        "/technology/ai/"
+      ],
+      "required_keywords": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "google-developers-blog",
+      "label": "Google for Developers Blog",
+      "type": "listing",
+      "url": "https://developers.googleblog.com/",
+      "required": false,
+      "grade": "B",
+      "path_prefixes": [
+        "/"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "Gemma",
+        "Jules"
+      ]
+    },
+    {
+      "name": "workspace-updates",
+      "label": "Google Workspace Updates",
+      "type": "listing",
+      "url": "https://workspaceupdates.googleblog.com/",
+      "required": false,
+      "grade": "B",
+      "path_prefixes": [
+        "/"
+      ],
+      "required_keywords": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "gemini-help",
+      "label": "Gemini Apps 帮助中心",
+      "type": "listing",
+      "url": "https://support.google.com/gemini/",
+      "required": false,
+      "grade": "B",
+      "path_prefixes": [
+        "/gemini/"
+      ],
+      "required_keywords": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "gemini-models",
+      "label": "Gemini API 模型目录",
+      "type": "page",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/gemini-api/docs/models"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "model"
+      ]
+    },
+    {
+      "name": "gemini-pricing",
+      "label": "Gemini API 定价",
+      "type": "page",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/gemini-api/docs/pricing"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "pricing"
+      ]
+    },
+    {
+      "name": "vertex-model-versions",
+      "label": "Vertex AI 模型版本与生命周期",
+      "type": "page",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/vertex-ai/generative-ai/docs/learn/"
+      ],
+      "required_keywords": [
+        "Gemini",
+        "model versions"
+      ]
+    },
+    {
+      "name": "google-ai-plans",
+      "label": "Google AI 订阅计划",
+      "type": "page",
+      "url": "https://one.google.com/about/google-ai-plans/",
+      "required": false,
+      "grade": "A",
+      "path_prefixes": [
+        "/about/google-ai-plans"
+      ],
+      "required_keywords": [
+        "Google AI Pro",
+        "Google AI Ultra"
+      ]
+    }
+  ]
+}
