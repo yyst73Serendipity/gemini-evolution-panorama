@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "Gemini / Google AI 产品与模型演进全景",
-  "cutoff": "2026-10-22",
-  "content_updated_at": "2026-10-22T09:00:00+08:00",
+  "cutoff": "2026-10-23",
+  "content_updated_at": "2026-10-23T17:01:21+08:00",
   "events": [
     {
       "id": "transformer-2017",
@@ -1639,6 +1639,69 @@
       "verified_at": "2026-10-22T09:00:00+08:00",
       "auto_generated": false,
       "verification": "人工核验"
+    },
+    {
+      "id": "2026-10-22-architecting-governed-self-evolving-ai-agents-on-google",
+      "date": "2026-10-22",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemma",
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+      "summary": "Build governed, self-evolving AI agents on Gemini Enterprise Agent Platform with ADK, BigQuery, Model Armor, and Cloud KMS to remediate outages in seconds.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-23T17:01:21+08:00",
+      "verified_at": "2026-10-23T17:01:21+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-10-22-streaming-comes-to-api-gateway-real-time-and",
+      "date": "2026-10-22",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+      "summary": "API Gateway introduces Public Preview support for streaming, including SSE, WebSockets, gRPC, and HTTP response streaming without spec changes.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-10-23T17:01:21+08:00",
+      "verified_at": "2026-10-23T17:01:21+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
     }
   ]
 }
