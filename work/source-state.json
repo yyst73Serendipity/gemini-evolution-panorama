@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-24T12:56:51+08:00",
+  "last_checked_at": "2026-10-27T11:29:35+08:00",
   "known_urls": [
     "013d630325fb34e2eff195cce0125edd400b6124827da722b4166ce076a33af3",
     "01a3a4dec765993401999ce6564b9698727f3cb086c51911c1a3a46fc09b3547",
@@ -23,6 +23,7 @@
     "07d632a2452be09af1a8eb9b4b38c4f268ebf635bc7fa88eedcf662723427478",
     "081614848b01dde6ee4c4b86172d51ddc9636ac12a615daa7ace11513fb3a0ba",
     "08edd28e9e5353aad0957c042ff059bc31b0a4f5bf2ede21524a6e73e74059e5",
+    "0966b615b20eb6f9886a825e88b3debbd9201c743b2157be7a2959f50bf39709",
     "09b809d2d56756f348363d266d083f6217ef07be0f821d9a2f87f6839b3300d0",
     "09dcbaabb889d40ba08a9f1d94a5ee26bb9baefa6c36a634bef919cdbd8e2344",
     "0a9905517dc61ed7e09bb1aa53c700f342d1578e7c3784bef8271ed4e4bad044",
@@ -140,6 +141,7 @@
     "36266d3f9617ed2f364747b8c7743cb99c68958a3755524d8128608fe678cb76",
     "365ffe2e0818bc4a3935128c898569e385d38a2c41fe491217ec13d6230fbec3",
     "36643cc7a65a7822a0609958a24224a964981bd5570e0d50db3831f1b2fd5a71",
+    "368b6668ab3ae40a13e85232d22f94e19deb143ea19dfee41bc20f42ae24faa8",
     "370959f54a903554b9d27e60de998d7d531d19be89ed1a1f41f808476145dac3",
     "373b973d5c2dd09fbe282badaf64bdc2517877da7078f0674e5d7d534f39ceec",
     "376e7b22a833b6480875e1bc01e2e8f3887d536ed2aaefbd4224c619aac6dede",
@@ -157,6 +159,7 @@
     "3aa42089a34e387ae0aad2422deddc14d0afe9278082b8db32f0f2f0e59a0999",
     "3b89d932ef398c59b643b1c861dd27dbfb189854d92991b467790a26145d548d",
     "3b96e7c543ee326e7fd0f614f43287c87d2ce2bc1f9b2c769ab625da75cc30be",
+    "3cc61aea4cc30ff81ae8518086598a80229ef3a4bf912fb2aad597e6afd590e7",
     "3cdfe051f90106eb34cf05e0bf88a9ffaccb6d992fcbf7c9e3f8d59b7420a5eb",
     "3dd2c629c583adf954dbdfa39d8d51274c5f26eb08657244a402b27511cb8fc3",
     "3e6415047d4f139249e1d1d1e988ffd5c072de4edace26b28084a8ee03914a5e",
@@ -622,84 +625,84 @@
     "ff8b4f43cc1f75914f7f4ec8102f773ee39ab376e0e827518468fb99bc5197e7"
   ],
   "page_hashes": {
-    "gemini-api-changelog": "3e698ac5b8ffbaeada4ec2ad95a74b9d7eda3f794700c1b79cca1182a643a442",
+    "gemini-api-changelog": "4affd5618866344d21443465dfd09a3d90435e19d201e59b0293f6f6ca081b28",
     "vertex-ai-release-notes": "91cfd5aa7907f28bb5801ff4b994f5a5e5dc94df3f6484e68730145a59983147",
     "deepmind-model-cards": "51f02f8a7fa8f7ee32b9f5e26aa3b0955dca563d97c1cf05823e1ce4f23b2ba1",
     "google-blog-gemini": "ad34f45c35b10050421b18e0d5b631b6a8269dadefd0b1e83e262d862b39c142",
-    "google-developers-blog": "f92495dcdba368aacba2194ac30404a0fb68277165fa8b4304b9eab1da0ecab2",
+    "google-developers-blog": "398febc79db17243405b90041de1911b33a09dc03f1cea4e8d421bfdec712774",
     "workspace-updates": "c89fe8eff722575b4a3b90d037a31f1982bd0d6ac71be3b7a3100bf631f806f0",
     "gemini-help": "6e6b72f0f071244bb5a9f1b5437d3da5c240f520c00b94e0e36bdcd183f51fec",
     "gemini-models": "a09fac4c334d0df951cdd2113560686170238d5df7bbbe7fd902011ac7eb2a22",
-    "gemini-pricing": "9f516532698eb66f2a8b86491545ad5d220ca2ce48d5162f4fb3a7ed6bacfa4c",
-    "vertex-model-versions": "975b4b665b81fd1751dac0fc878ab738f25c357416dc8ef7c4b0d8dfef37cdaa",
-    "google-ai-plans": "c1ce4afce6e2adec01fa53fa87cfe416a2df56f636c4989b2d0a4304027116d0"
+    "gemini-pricing": "378120261b1b1e5fb5f7d1423b380fd948b3776c9aad1cf3972ebdf45d262c7d",
+    "vertex-model-versions": "4db31c49fff23f1948012244ca54a621ab96d8f3df5aa7b017f5119fed0101bb",
+    "google-ai-plans": "d5f3e40db1674a26314bb40634c268c8aa2a1729307b066d076c10ba5a114922"
   },
   "source_health": {
     "gemini-api-changelog": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/changelog",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "vertex-ai-release-notes": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "deepmind-model-cards": {
       "ok": true,
       "final_url": "https://deepmind.google/models/model-cards",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "google-blog-gemini": {
       "ok": true,
       "final_url": "https://blog.google/products-and-platforms/products/gemini",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "google-developers-blog": {
       "ok": true,
       "final_url": "https://developers.googleblog.com/",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "workspace-updates": {
       "ok": true,
       "final_url": "https://workspaceupdates.googleblog.com/",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "gemini-help": {
       "ok": true,
       "final_url": "https://support.google.com/gemini",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "gemini-models": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/models",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "gemini-pricing": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "vertex-model-versions": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     },
     "google-ai-plans": {
       "ok": true,
       "final_url": "https://one.google.com/about/google-ai-plans",
       "error": "",
-      "checked_at": "2026-10-24T12:56:51+08:00"
+      "checked_at": "2026-10-27T11:29:35+08:00"
     }
   }
 }
