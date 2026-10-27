@@ -1,26 +1,22 @@
-# 每日检查 Google 官方来源，安全更新 Gemini 全景并发布 GitHub Pages。
-name: 更新并发布 Gemini 演进全景
+# 每日检查 Google 官方来源，安全更新 Gemini 全景，并调用独立工作流发布页面。
+name: 更新 Gemini 演进全景
 
 on:
   schedule:
     - cron: "30 0 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 concurrency:
-  group: gemini-panorama-pages
+  group: gemini-panorama-update
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
+    outputs:
+      checked_at: ${{ steps.update-result.outputs.checked_at }}
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
@@ -71,16 +67,6 @@ jobs:
           echo "content_changed=$(python3 -c 'import json; print(str(json.load(open("/tmp/gemini-update-result.json"))["content_changed"]).lower())')" >> "$GITHUB_OUTPUT"
           echo "checked_at=$(python3 -c 'import json; print(json.load(open("/tmp/gemini-update-result.json"))["checked_at"])')" >> "$GITHUB_OUTPUT"
 
-      - name: 构建 Pages 临时站点
-        run: |
-          mkdir -p site
-          CHECKED_AT="$(python3 -c 'import json; print(json.load(open("/tmp/gemini-update-result.json"))["checked_at"])')"
-          python3 work/build-page.py \
-            --checked-at "$CHECKED_AT" \
-            --output site/index.html
-          cp site/index.html site/gemini-evolution-panorama.html
-          touch site/.nojekyll
-
       - name: 提交可信内容变化
         if: steps.update-result.outputs.content_changed == 'true'
         run: |
@@ -98,14 +84,12 @@ jobs:
             git push
           fi
 
-      - name: 配置 GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: 上传 Pages 产物
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: site
-
-      - name: 部署 GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  deploy-pages:
+    needs: update
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy-gemini-pages.yml
+    with:
+      checked_at: ${{ needs.update.outputs.checked_at }}

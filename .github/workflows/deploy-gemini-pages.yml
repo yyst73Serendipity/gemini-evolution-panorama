@@ -1,0 +1,96 @@
+# 构建、验证并发布 Gemini 演进全景到 GitHub Pages。
+name: 发布 Gemini 演进全景
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      checked_at:
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: gemini-panorama-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 检出主分支最新版本
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: 构建 Pages 临时首页
+        env:
+          CHECKED_AT: ${{ inputs.checked_at }}
+        run: |
+          mkdir -p site
+          if [ -n "$CHECKED_AT" ]; then
+            python3 work/build-page.py \
+              --checked-at "$CHECKED_AT" \
+              --output site/index.html
+          else
+            python3 work/build-page.py \
+              --output site/index.html
+          fi
+
+      - name: 检查内嵌 JavaScript 语法
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path("site/index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r'<script(?![^>]*type="application/json")[^>]*>(.*?)</script>', html, re.S)
+          Path("/tmp/gemini-panorama-script.js").write_text("\n".join(scripts), encoding="utf-8")
+          PY
+          node --check /tmp/gemini-panorama-script.js
+
+      - name: 运行全部测试
+        run: |
+          python3 -m unittest \
+            tests/test_timeline_data.py \
+            tests/test_gemini_evolution_panorama.py \
+            tests/test_source_parser.py \
+            tests/test_auto_update.py \
+            tests/test_workflow_static.py \
+            -v
+
+      - name: 完成 Pages 发布产物
+        run: |
+          cp site/index.html site/gemini-evolution-panorama.html
+          touch site/.nojekyll
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传 Pages 产物
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: 部署 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -12,7 +12,8 @@
 - 主题切换采用带半明暗圆形图标的胶囊按钮，支持浅色 / 深色双态主题，以及响应式布局、键盘焦点、减少动画、阅读进度和打印样式。
 - 所有事件预渲染进单个 HTML；禁用 JavaScript 时仍可完整阅读。
 - 每天北京时间 08:30 自动检查 11 个官方入口，有可信内容变化时才受限提交 4 个发布文件。
-- 每次工作流均生成 GitHub Pages 临时站点，即使没有事实变化，也能展示本次最近检查时间而不改写仓库。
+- 官方资料更新与 GitHub Pages 发布职责分离：每日检查后自动发布，人工推送 `main` 也会立即部署最新页面。
+- 更新工作流可把本轮 `checked_at` 传给临时发布构建，即使没有事实变化，也能展示最新检查时间而不改写仓库。
 
 ## 📁 项目目录结构
 
@@ -20,7 +21,8 @@
 gemini/
 ├── .github/
 │   └── workflows/
-│       └── update-gemini-panorama.yml   # 每日检查、测试、受限提交和 Pages 发布
+│       ├── deploy-gemini-pages.yml      # 构建、测试并发布 GitHub Pages
+│       └── update-gemini-panorama.yml   # 每日检查、测试、受限提交并调用发布流程
 ├── docs/
 │   ├── source-audit.md                   # 官方来源、事实核验和收录边界
 │   └── superpowers/
@@ -134,19 +136,31 @@ python3 work/update-gemini-panorama.py \
 
 ## ⚙️ GitHub Actions 与 Pages
 
+项目使用两条职责分离的工作流：
+
+### 官方资料更新
+
 工作流：`.github/workflows/update-gemini-panorama.yml`
 
-- 定时：每天 UTC 00:30，即北京时间 08:30。
-- 触发：定时运行或 GitHub Actions 手动 `workflow_dispatch`。
-- 流程：官方来源检查 → 页面构建 → JavaScript 语法检查 → 全部测试 → Pages 临时构建 → 有内容变化时受限提交 → Pages 部署。
-- 自动提交只允许以下文件：
+- 定时：每天 UTC 00:30，即北京时间 08:30；也支持 GitHub Actions 手动 `workflow_dispatch`。
+- 流程：官方来源检查 → 仓库内离线页面构建 → JavaScript 语法检查 → 全部测试 → 有可信内容变化时受限提交 → 调用独立 Pages 发布工作流。
+- 更新任务仅持有 `contents: write`，自动提交只允许以下文件：
   - `work/timeline-data.json`
   - `work/source-state.json`
   - `outputs/gemini-evolution-panorama.html`
   - `CHANGELOG.md`
-- Pages 同时发布 `index.html` 和可下载副本 `gemini-evolution-panorama.html`。
+- 更新任务把本轮 `checked_at` 传给发布工作流，因此没有事实变化时也能在临时站点显示最新检查时间，而不改写仓库文件。
 
-GitHub Pages 发布后，站点仍是纯前端静态文件；自动检查逻辑只在 GitHub Actions 中运行。
+### GitHub Pages 发布
+
+工作流：`.github/workflows/deploy-gemini-pages.yml`
+
+- 触发：推送到 `main`、手动 `workflow_dispatch`，或由官方资料更新工作流通过 `workflow_call` 调用。
+- 流程：检出 `main` 最新版本 → 构建 Pages 临时首页 → JavaScript 语法检查 → 全部测试 → 组装站点产物 → 上传并部署 Pages。
+- 发布任务仅持有读取仓库和部署 Pages 所需权限，不执行官方来源抓取或 Git 写入。
+- Pages 同时发布 `index.html`、可下载副本 `gemini-evolution-panorama.html` 和 `.nojekyll`。
+
+GitHub Pages 发布后，站点仍是纯前端静态文件；自动检查逻辑只在 GitHub Actions 中运行。人工修改 UI 或代码并推送到 `main` 后，不必再手动运行更新工作流。
 
 ## 📚 来源策略与维护边界
 
