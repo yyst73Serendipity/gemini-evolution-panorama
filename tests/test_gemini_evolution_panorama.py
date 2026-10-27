@@ -82,12 +82,10 @@ class GeminiPanoramaPageTests(unittest.TestCase):
         self.assertIn(self.data["content_updated_at"], self.html)
         self.assertIn(state["last_checked_at"], self.html)
 
-    def test_year_navigation_contains_every_event_year(self) -> None:
+    def test_year_groups_keep_every_event_year_anchor(self) -> None:
         years = sorted({event["date"][:4] for event in self.data["events"]})
-        self.assertIn('aria-label="年份导航"', self.html)
         for year in years:
             with self.subTest(year=year):
-                self.assertIn(f'href="#year-{year}"', self.html)
                 self.assertIn(f'id="year-{year}"', self.html)
 
     def test_page_has_seven_primary_sections_and_semantic_landmarks(self) -> None:
@@ -184,12 +182,15 @@ class GeminiPanoramaPageTests(unittest.TestCase):
             "category-filter",
             "family-filter",
             "lifecycle-filter",
-            "major-only",
             "reset-filters",
         ):
             with self.subTest(control=control_id):
                 self.assertIn(f'id="{control_id}"', self.html)
         self.assertIn('id="no-results"', self.html)
+        self.assertIn('class="reset-button" id="reset-filters"', self.html)
+        self.assertNotIn('class="year-nav"', self.html)
+        self.assertNotIn('id="major-only"', self.html)
+        self.assertNotIn('id="result-count"', self.html)
 
     def test_interaction_controls_and_accessibility_hooks_exist(self) -> None:
         for token in (
@@ -197,10 +198,7 @@ class GeminiPanoramaPageTests(unittest.TestCase):
             'id="category-filter"',
             'id="family-filter"',
             'id="lifecycle-filter"',
-            'id="major-only"',
             'id="theme-toggle"',
-            'id="result-count"',
-            'aria-live="polite"',
             'function applyFilters()',
             'function syncUrlState()',
             'function restoreUrlState()',
@@ -212,7 +210,6 @@ class GeminiPanoramaPageTests(unittest.TestCase):
 
     def test_visual_accessibility_and_offline_theme_hooks_exist(self) -> None:
         for token in (
-            'prefers-color-scheme',
             'prefers-reduced-motion',
             ':focus-visible',
             '@media print',
@@ -222,6 +219,87 @@ class GeminiPanoramaPageTests(unittest.TestCase):
         ):
             with self.subTest(token=token):
                 self.assertIn(token, self.html)
+
+    def test_editorial_visual_system_is_embedded_without_legacy_gradient_shell(self) -> None:
+        for token in (
+            '--paper:',
+            '--ink:',
+            '--accent-blue:',
+            '--category-model:',
+            'data-design="editorial"',
+            '.timeline-rail',
+            '.control-field',
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, self.html)
+        self.assertNotIn('radial-gradient(circle at 8% 0%', self.html)
+        self.assertNotIn('--accent: linear-gradient', self.html)
+
+    def test_editorial_timeline_and_material_controls_keep_required_structure(self) -> None:
+        self.assertIn('class="timeline timeline-rail"', self.html)
+        self.assertIn('class="control control-field"', self.html)
+        self.assertIn('class="year-heading"', self.html)
+        self.assertIn('class="event-card"', self.html)
+        self.assertIn('@media (max-width: 680px)', self.html)
+        self.assertIn('.year-group { grid-template-columns: 1fr;', self.html)
+
+    def test_theme_toggle_uses_compact_icon_label_control(self) -> None:
+        for token in (
+            'class="theme-toggle-icon"',
+            'class="theme-toggle-label">主题</span>',
+            '.theme-toggle-icon {',
+            "themeToggle.querySelector('.theme-toggle-label')",
+            'themeToggle.dataset.theme = preference',
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, self.html)
+        self.assertNotIn("themeToggle.textContent = labels[preference]", self.html)
+
+    def test_filter_layout_keeps_compact_year_lifecycle_and_inline_reset(self) -> None:
+        for token in (
+            '.control-grid { display: grid; grid-template-columns:',
+            'class="control control-field compact-filter" for="year-filter"',
+            'class="control control-field compact-filter" for="lifecycle-filter"',
+            'class="reset-button" id="reset-filters"',
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, self.html)
+        self.assertNotIn('class="control-actions"', self.html)
+        self.assertNotIn('aria-label="年份导航"', self.html)
+
+    def test_official_sources_use_compact_inline_references(self) -> None:
+        for token in (
+            '.sources { display: flex; flex-wrap: wrap; align-items: baseline;',
+            '.sources a { display: inline-flex; align-items: baseline;',
+            '.sources a::before { content: "↗";',
+            'border: 0; background: transparent;',
+            '.sources a:hover span { color: var(--accent-deep);',
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, self.html)
+        self.assertNotIn('.sources a { display: grid;', self.html)
+
+    def test_filter_controls_share_vertical_height(self) -> None:
+        self.assertIn(
+            '.control input, .control select { min-width: 0; width: 100%; height: 48px;',
+            self.html,
+        )
+        self.assertIn(
+            '.reset-button { align-self: end; display: inline-flex; align-items: center; justify-content: center; height: 48px;',
+            self.html,
+        )
+
+    def test_theme_toggle_is_explicitly_two_state(self) -> None:
+        for token in (
+            "const preference = ['light', 'dark'].includes(theme) ? theme : 'light';",
+            "const savedTheme = localStorage.getItem('gemini-panorama-theme') || 'light';",
+            "const order = ['light', 'dark'];",
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, self.html)
+        self.assertNotIn("'system'", self.html)
+        self.assertNotIn('prefers-color-scheme', self.html)
+        self.assertNotIn("matchMedia('(prefers-color-scheme: dark)')", self.html)
 
 
 if __name__ == "__main__":
