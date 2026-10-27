@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-27T11:29:35+08:00",
+  "last_checked_at": "2026-10-27T13:29:11+08:00",
   "known_urls": [
     "013d630325fb34e2eff195cce0125edd400b6124827da722b4166ce076a33af3",
     "01a3a4dec765993401999ce6564b9698727f3cb086c51911c1a3a46fc09b3547",
@@ -642,67 +642,67 @@
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/changelog",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "vertex-ai-release-notes": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "deepmind-model-cards": {
       "ok": true,
       "final_url": "https://deepmind.google/models/model-cards",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "google-blog-gemini": {
       "ok": true,
       "final_url": "https://blog.google/products-and-platforms/products/gemini",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "google-developers-blog": {
       "ok": true,
       "final_url": "https://developers.googleblog.com/",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "workspace-updates": {
-      "ok": true,
-      "final_url": "https://workspaceupdates.googleblog.com/",
-      "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "ok": false,
+      "final_url": "",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "gemini-help": {
       "ok": true,
       "final_url": "https://support.google.com/gemini",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "gemini-models": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/models",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "gemini-pricing": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "vertex-model-versions": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     },
     "google-ai-plans": {
       "ok": true,
       "final_url": "https://one.google.com/about/google-ai-plans",
       "error": "",
-      "checked_at": "2026-10-27T11:29:35+08:00"
+      "checked_at": "2026-10-27T13:29:11+08:00"
     }
   }
 }
