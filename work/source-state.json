@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-31T14:11:23+08:00",
+  "last_checked_at": "2026-11-01T14:43:14+08:00",
   "known_urls": [
     "00217b8f4c7c46b76b663e6a9712d9593e759dc8c9e5a80d07b5bfbdbe988b35",
     "0046d66e321ef861df60bc3acaa481845b5b4f8cfc3a5e633a28018d0f024992",
@@ -169,6 +169,7 @@
     "3cc61aea4cc30ff81ae8518086598a80229ef3a4bf912fb2aad597e6afd590e7",
     "3cdfe051f90106eb34cf05e0bf88a9ffaccb6d992fcbf7c9e3f8d59b7420a5eb",
     "3dd2c629c583adf954dbdfa39d8d51274c5f26eb08657244a402b27511cb8fc3",
+    "3dedf5b15c507a9fa74d8ce9ec228f40e03a3159f46224fd3c5030d6d296f1ed",
     "3e6415047d4f139249e1d1d1e988ffd5c072de4edace26b28084a8ee03914a5e",
     "3ebba5d803731cc0d2b3ab03adfaaf73a4b7a35e7b32055ed47b9facd8166c63",
     "3ee5eecb1d57097fa185a8d3f17d2cd380b530eac3c68de6f45e050d716aba91",
@@ -182,6 +183,7 @@
     "41de729219562a63ca08f4c290f9890c8aca26279493e8a2aba20db57e0319fd",
     "41e1019634142deff48e255f49bd71f30dd38d426004d308da830ab0a72e6d30",
     "420b25a2e23f1fcc31452b292527a7ff09b6c1e0a007d32c162422613802b868",
+    "42a67205371c13089a014f3f60d0a2a3d385b6f26b74c1b0cff61216c66eaa18",
     "42f0d0b5a1488e86ae4313713a0195c50aaa8e66f678d0fa853a377ce6a183d5",
     "42ff31951398da19b6b6c20820113ff6a0297196733ca3c68af57364f87a4b3f",
     "436e18363149d6c1b8dc29ad02b0583a56e9327898a590368dbfac04fccc55aa",
@@ -672,67 +674,67 @@
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/changelog",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "vertex-ai-release-notes": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "deepmind-model-cards": {
       "ok": true,
       "final_url": "https://deepmind.google/models/model-cards",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "google-blog-gemini": {
       "ok": true,
       "final_url": "https://blog.google/products-and-platforms/products/gemini",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "google-developers-blog": {
       "ok": true,
       "final_url": "https://developers.googleblog.com/",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "workspace-updates": {
-      "ok": false,
-      "final_url": "",
-      "error": "ValueError: 重定向到了非允许官方来源: https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/about-ai-usage-limits?p=limits&rd=1&visit_id=639290238886275705-843835048",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "ok": true,
+      "final_url": "https://workspaceupdates.googleblog.com/",
+      "error": "",
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "gemini-help": {
       "ok": true,
       "final_url": "https://support.google.com/gemini",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "gemini-models": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/models",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "gemini-pricing": {
       "ok": true,
       "final_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "vertex-model-versions": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     },
     "google-ai-plans": {
       "ok": true,
       "final_url": "https://one.google.com/about/google-ai-plans",
       "error": "",
-      "checked_at": "2026-10-31T14:11:23+08:00"
+      "checked_at": "2026-11-01T14:43:14+08:00"
     }
   }
 }
