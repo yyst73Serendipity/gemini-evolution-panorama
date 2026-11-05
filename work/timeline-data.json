@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "Gemini / Google AI 产品与模型演进全景",
-  "cutoff": "2026-11-04",
-  "content_updated_at": "2026-11-04T14:55:02+08:00",
+  "cutoff": "2026-11-05",
+  "content_updated_at": "2026-11-05T15:16:45+08:00",
   "events": [
     {
       "id": "transformer-2017",
@@ -1857,6 +1857,68 @@
       ],
       "first_seen_at": "2026-11-04T14:55:02+08:00",
       "verified_at": "2026-11-04T14:55:02+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-03-designing-responsible-ai-for-learning",
+      "date": "2026-11-03",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "Designing responsible AI for learning",
+      "summary": "We’re bringing Guided Learning capabilities to Search and Google Classroom, and evolving our approach to school controls.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google Workspace Updates",
+          "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-05T15:16:45+08:00",
+      "verified_at": "2026-11-05T15:16:45+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-03-new-research-shows-how-guided-learning-supports-students",
+      "date": "2026-11-03",
+      "date_precision": "day",
+      "category": "产品",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "New research shows how Guided Learning supports students",
+      "summary": "New research shows Guided Learning drives higher learning gains, plus new features for Google Classroom.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google Workspace Updates",
+          "url": "https://blog.google/products-and-platforms/products/education/guided-learning-uk-japan",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-05T15:16:45+08:00",
+      "verified_at": "2026-11-05T15:16:45+08:00",
       "auto_generated": true,
       "verification": "自动收录"
     }
