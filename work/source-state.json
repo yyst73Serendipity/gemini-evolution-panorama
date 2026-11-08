@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-11-07T14:29:29+08:00",
+  "last_checked_at": "2026-11-08T14:36:02+08:00",
   "known_urls": [
     "00217b8f4c7c46b76b663e6a9712d9593e759dc8c9e5a80d07b5bfbdbe988b35",
     "0046d66e321ef861df60bc3acaa481845b5b4f8cfc3a5e633a28018d0f024992",
@@ -707,67 +707,67 @@
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/changelog",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "vertex-ai-release-notes": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "deepmind-model-cards": {
       "ok": true,
       "final_url": "https://deepmind.google/models/model-cards",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "google-blog-gemini": {
       "ok": true,
       "final_url": "https://blog.google/products-and-platforms/products/gemini",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "google-developers-blog": {
       "ok": true,
       "final_url": "https://developers.googleblog.com/",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "workspace-updates": {
       "ok": false,
       "final_url": "",
-      "error": "ValueError: 重定向到了非允许官方来源: https://knowledge.workspace.google.com/admin/security/manage-google-workspace-smart-features-for-your-users?rd=1&visit_id=639296297740659409-1950361819",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "gemini-help": {
       "ok": true,
       "final_url": "https://support.google.com/gemini",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "gemini-models": {
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/models",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "gemini-pricing": {
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/pricing",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "vertex-model-versions": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     },
     "google-ai-plans": {
       "ok": true,
       "final_url": "https://one.google.com/about/google-ai-plans",
       "error": "",
-      "checked_at": "2026-11-07T14:29:29+08:00"
+      "checked_at": "2026-11-08T14:36:02+08:00"
     }
   }
 }
