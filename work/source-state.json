@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-11-09T15:04:34+08:00",
+  "last_checked_at": "2026-11-10T15:40:14+08:00",
   "known_urls": [
     "00217b8f4c7c46b76b663e6a9712d9593e759dc8c9e5a80d07b5bfbdbe988b35",
     "0046d66e321ef861df60bc3acaa481845b5b4f8cfc3a5e633a28018d0f024992",
@@ -63,6 +63,7 @@
     "16ee4bc356f2ca06a93acffc2a870ae6a020cedca7f2b3e0d89d7d33f2da356a",
     "1721b9cec0f4da2177a48b8bfba95975466f5a80c807b5bdecfcef2e64224dd6",
     "172da4f6fa7f8c1919a4fa6a1b6e74eed99679e7bd85c71c3be71c00e4bf6636",
+    "1732b393d9d8cebadbc81b8aa562b76c93ebcad77713e9b6e197168384774525",
     "1867674ae34622028498d95fcb65342ac816fda3e779161e5735f0853e16a1a8",
     "191ce8aea2b7cc787db72e281cae9ef7131914bd6127c16e870e8a4538e88ed3",
     "193e3ce8bf0ecd5d0bbfd4c74232cb84aedd3a846e8964f697ad413f62378b5a",
@@ -185,6 +186,7 @@
     "3ee5eecb1d57097fa185a8d3f17d2cd380b530eac3c68de6f45e050d716aba91",
     "3f879c37e56a4ee18e672dafab77ba96708cafae3fde31897b2524350e6c534b",
     "3fe05d063206d4b3be841b8be7e9a78bcf56d6f699554a6f5a0fcbe236c71117",
+    "4038f53b8e3201a5fcb613f962158200b483d413bc900cea3b300e6c51718c72",
     "40505693cdfb6b99c3b80b21a3c97931a35b592499969c12fe03cc2c0ec757a0",
     "406a97a686b20d1585aadfe46103384e0bc2c60a0139bd389be002a32d087eed",
     "409c44946b665859af5a88588fb7394c6c95d181c867af62584a081ab593a6f3",
@@ -240,6 +242,7 @@
     "5258cdfa4ffb92983bf8b90e5fe2eba470c4a3669c9931acf6575c69fbcbea82",
     "52abb269eb40acc07e13ad507ea5104244a4102210579311aa9e75ed5e770d3c",
     "5471d1fbaf395ec531cdbfef65dda15ddbb22810cf58e966e0d51df135df7e55",
+    "5480583e6c6c7b487c52c96cf36b3247795cff049bfba3c551ea7085b9336dd2",
     "553d47b120f4e61f62f804417897893d45e077177933818d462d21d3dbdef606",
     "5602e916cb003a465170db1e2d40a380ef94bc0cf2a1e28f6cfce9539375ffe6",
     "5605321db33ec3e8d05a00fe831503fadb66aa34e85228dd24c4e13e04c867b4",
@@ -304,6 +307,7 @@
     "6a8a7fd7ce96cb4fe925c5b19140192e493fed4f491bb1aa166da98bf750451e",
     "6a9a60436b868b8002e1c8b1d8abc0bc8cf8139dfca6701f6ce6f4302381bdd2",
     "6aa8935159471a507c5cd9e782892502cc59f1ef516ac05316ddfb933284f58a",
+    "6abd150d46e31ae1324c33c6fe6c7f02c0af202b48e1f164eb9a76362f65b7ae",
     "6aecfc06592a637d51858054a3c5d4342174bf2c762c5d4617f15110dfb2403a",
     "6b17acc3c741af526a0055957f677b16a563755cdb4be42973ef31f0cd6b1a9f",
     "6b1f24ca40632bc9666ffcf63265e1cd58e916de59629ef8d73e254bf07bd582",
@@ -399,6 +403,7 @@
     "8f503859e243900edd3c59507dc1ea3c5399ce2b3c2a243546ea87e4b472b0ac",
     "8f6d788e149467114e07382cf98aa69aca7b902b08ff591beab65294dfced5bc",
     "8f83bb98f78af00faed2c02cf2aada3777195d73848f4b8947420081f01daa95",
+    "8f88f1cab9ba0b59ac648bf707d0b109304c180863cec01910da436701f7c3be",
     "901fefb6b61c8fa791441c89f2d23340e885b26ae3c171f6bb274d3a2397c0af",
     "9036161ef135d0178530f54a9ebc914c910363d7372b27c8ee9b6d635c5a153b",
     "9090d62bd8c4019da545f581afb05e97c6a277b9f04e669c9fe2d07c48ffbb02",
@@ -469,6 +474,7 @@
     "a6bd08cc8b4b35b31b9e2c322e2b1827d64f62a2e7a972c70ba35b4093a0f0e6",
     "a7515a922e211015170bdd72f06baa5d31597a6f171ca4193ba0326e5824cc56",
     "a7c0ccf1043e4b0eee140b6a30ce16bb98b184bdc749cfc41725fb4fd1f70084",
+    "a7fcfe5d662072edfd97eff43ce33bbfb90765eba877e756eced43dafdf2f4e8",
     "a8036abdc292b1d53ab330e0b42509143f77a08cd6e7077e8dc996b4bd19012e",
     "a80ad127c38db94da1401f292a075d61f86c5609522bf106f90a781590533174",
     "a81c8502ece80dc282e5c4962f8c12ac4ba7f3c29971e433bfa0c1395b1ed43e",
@@ -570,6 +576,7 @@
     "d1c1c093455a2e645a91d7f87a072a4740b98fd5d71a1f5218358f73d40e6390",
     "d1e45959289da6fa9344a68920e7916d80e19f96d8e276fc24d99f1a40741969",
     "d247e96a4c11a0c4db6114a63f531ff4c87254743e7b69bfb9d0da9232a28200",
+    "d2db72384e1cdff3142fec830922c9cb0bd0b0f950f4bd54b164eea69e0f1201",
     "d41d5b987125b49e2f73df78f5dfa0ae66b621cd5399097d38094c03eec32811",
     "d4c2bb4e05a748dbd461a74e1c1f523cbd090a29091681ce703021a45f747e9e",
     "d4f67323dd744754ca54feb199b5118eacacd4a6329bce6179276d22d0ae117d",
@@ -663,6 +670,7 @@
     "f27ee5c8f490aca26a998836795a2643a3cce4fb3666be53ca33a233767ab5ee",
     "f3e1c9b71a2abe93747dfa5d1b854ffcfbd27a03ca70dbfd44fa83fa05611cef",
     "f43d22ec6333a7c79eb3167e49472111dd7218c9e5786645fb0fbc59af43a61a",
+    "f4d61ba8b3dfa4650f000f1e0b5f3ade4ded63aa12a4a4606dfd27066cff5f6a",
     "f525cc2405465e6c0b44f5ed5a22bd7e7926e83fa21cb910dcc5112044f2300d",
     "f58de8127fcd5d9f6ca7ac883eecf26dd71f0a1704b0a3855f5e21fb59d5457a",
     "f5d8912c5a50ababf32ea312752b797bc790fd937c2c6eabb05946249b9c9cc6",
@@ -693,83 +701,83 @@
   ],
   "page_hashes": {
     "gemini-api-changelog": "b804ddbb0a715efcd18241a13a107566155e513d9e8acceb4189cac201b4ea5a",
-    "vertex-ai-release-notes": "7336e27316b9dcb4ce0759910c88782cb63d406ba20b65bccca997753fc3d294",
+    "vertex-ai-release-notes": "92123e940ffce8fed7754c0da793e4b4936d80a8e6c4b60a062c32a932461214",
     "deepmind-model-cards": "7e524e8bf243476d66fc10bc8707161e2119fd2dfd2bf952f4410b65c5f4c019",
     "google-blog-gemini": "7035d52d747bf3bc132a2f9930ff89aedd421d3cae7f3fae42e7b46d32e7b4d1",
-    "google-developers-blog": "416d0e2d04be6c5dfc81c7f91817a59424edd6a315191d6fac2e87bd66c3841b",
-    "workspace-updates": "e958a20311b5b9ad90f404c057e35d19d53d80018317904d5b118bc50eef891c",
+    "google-developers-blog": "a1e2d06e8b7798b8e3e6f49e0d1083c1b40cf18fa3095f730747df82dcca1664",
+    "workspace-updates": "117cd4604b4e7fc81be35f35ec3867ef6e9ed7ea33e2f4ee18558c56aa596c24",
     "gemini-help": "6e6b72f0f071244bb5a9f1b5437d3da5c240f520c00b94e0e36bdcd183f51fec",
     "gemini-models": "6d7106424eeb214db87063f527244b8677839b236b54327658dafd7cc581ee73",
     "gemini-pricing": "50fecbc32f5bb0e23fad4feb881090453c3a78721b729e252bf987c72ebe301c",
-    "vertex-model-versions": "c305d344f6f665d47d68beb468856d44d3eb16f98a9ee0c5f3d3ee2232d6f62e",
-    "google-ai-plans": "783ac27af01baf7f007d44a357d7e25b041e8e2343a4549f20b2b1ac31144419"
+    "vertex-model-versions": "833c8acaa228c35fcc4562e575c6be722d79e9cf78606b9035ba3783a798b4fb",
+    "google-ai-plans": "17baeca0a0bcbdc13e5c654f57ccbca1565bdfc36d25150f255d0a336f9766c4"
   },
   "source_health": {
     "gemini-api-changelog": {
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/changelog",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "vertex-ai-release-notes": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "deepmind-model-cards": {
       "ok": true,
       "final_url": "https://deepmind.google/models/model-cards",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "google-blog-gemini": {
       "ok": true,
       "final_url": "https://blog.google/products-and-platforms/products/gemini",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "google-developers-blog": {
       "ok": true,
       "final_url": "https://developers.googleblog.com/",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "workspace-updates": {
       "ok": false,
       "final_url": "",
-      "error": "ValueError: 重定向到了非允许官方来源: https://knowledge.workspace.google.com/admin/security/about-client-side-encryption?rd=1&visit_id=639298046779647856-1587808875",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "error": "ValueError: 重定向到了非允许官方来源: https://knowledge.workspace.google.com/admin/studio/get-started-workspace-studio-set-up-guide-for-admins?rd=1&visit_id=639298932219090339-1524879999",
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "gemini-help": {
       "ok": true,
       "final_url": "https://support.google.com/gemini",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "gemini-models": {
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/models",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "gemini-pricing": {
       "ok": false,
       "final_url": "",
       "error": "ValueError: 重定向到了非允许官方来源: https://aistudio.google.com/docs/pricing",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "vertex-model-versions": {
       "ok": true,
       "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     },
     "google-ai-plans": {
       "ok": true,
       "final_url": "https://one.google.com/about/google-ai-plans",
       "error": "",
-      "checked_at": "2026-11-09T15:04:34+08:00"
+      "checked_at": "2026-11-10T15:40:14+08:00"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "Gemini / Google AI 产品与模型演进全景",
-  "cutoff": "2026-11-07",
-  "content_updated_at": "2026-11-07T14:29:29+08:00",
+  "cutoff": "2026-11-10",
+  "content_updated_at": "2026-11-10T15:40:14+08:00",
   "events": [
     {
       "id": "transformer-2017",
@@ -1950,6 +1950,100 @@
       ],
       "first_seen_at": "2026-11-07T14:29:29+08:00",
       "verified_at": "2026-11-07T14:29:29+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-09-announcing-long-context-training-on-tpus-with-maxtext",
+      "date": "2026-11-09",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemma"
+      ],
+      "lifecycle": "升级",
+      "title": "Announcing Long-Context Training on TPUs with MaxText Context Parallelism",
+      "summary": "Learn how MaxText enables efficient long-context LLM training up to 14M tokens on Cloud TPUs using advanced context parallelism strategies and Tokamax Splash Attention.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-10T15:40:14+08:00",
+      "verified_at": "2026-11-10T15:40:14+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-09-from-prompt-to-app-build-with-google-maps",
+      "date": "2026-11-09",
+      "date_precision": "day",
+      "category": "订阅计划",
+      "families": [
+        "Google AI Studio",
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "From prompt to app: Build with Google Maps in AI Studio",
+      "summary": "Build geospatial apps using Google Maps Platform in Google AI Studio with one-click demo keys and no credit card required.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-10T15:40:14+08:00",
+      "verified_at": "2026-11-10T15:40:14+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-09-what-is-pathways-single-controller-training-for-large",
+      "date": "2026-11-09",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "What is Pathways? Single-controller training for large models",
+      "summary": "Discover how Pathways on Google Cloud enables single-client distributed training for large AI models, addressing scaling and coordination challenges across TPU clusters.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-10T15:40:14+08:00",
+      "verified_at": "2026-11-10T15:40:14+08:00",
       "auto_generated": true,
       "verification": "自动收录"
     }
