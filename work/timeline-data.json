@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "Gemini / Google AI 产品与模型演进全景",
-  "cutoff": "2026-11-15",
-  "content_updated_at": "2026-11-15T15:03:26+08:00",
+  "cutoff": "2026-11-17",
+  "content_updated_at": "2026-11-17T16:23:40+08:00",
   "events": [
     {
       "id": "transformer-2017",
@@ -2202,6 +2202,99 @@
       ],
       "first_seen_at": "2026-11-13T15:07:39+08:00",
       "verified_at": "2026-11-13T15:07:39+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-16-agents-are-sessions-not-requests-size-gke-node",
+      "date": "2026-11-16",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "Agents are sessions, not requests: size GKE node pools for AI agent sessions",
+      "summary": "Learn how Agent Substrate & AX park idle AI agent sessions on GKE to cut compute costs by up to 40% while preserving session state and memory.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-17T16:23:40+08:00",
+      "verified_at": "2026-11-17T16:23:40+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-16-securing-your-agents-a-hands-on-guide-to",
+      "date": "2026-11-16",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemini"
+      ],
+      "lifecycle": "升级",
+      "title": "Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection",
+      "summary": "Learn how to set up Agent Anomaly Detection on the Gemini Platform to monitor agent behavior, detect out-of-scope actions, and configure alerting.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-17T16:23:40+08:00",
+      "verified_at": "2026-11-17T16:23:40+08:00",
+      "auto_generated": true,
+      "verification": "自动收录"
+    },
+    {
+      "id": "2026-11-16-tpu-model-design-considerations-and-optimization-guide",
+      "date": "2026-11-16",
+      "date_precision": "day",
+      "category": "开发者平台",
+      "families": [
+        "Gemma"
+      ],
+      "lifecycle": "升级",
+      "title": "TPU Model Design Considerations and Optimization Guide",
+      "summary": "Learn essential TPU model design and optimization principles—covering 256-aligned shapes, LatentMoE compression, FP8 precision, and physical mesh parallelism—to maximize efficiency across LLM training and serving workloads.",
+      "difference": "相较此前公开状态，Google 官方新增或更新了该模型、产品或平台信息；具体差异以官方原文为准。",
+      "optimization": "优化重点以官方公布的能力、效率、可用范围或开发者工作流说明为准。",
+      "availability": "可用范围、地区、套餐和接口状态以对应 Google 官方页面为准。",
+      "significance": "该条目用于标记 Google AI 官方演进中的新节点，不推断官方未公布的性能或商业指标。",
+      "importance": "standard",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google for Developers Blog",
+          "url": "https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide",
+          "grade": "B",
+          "type": "official-announcement"
+        }
+      ],
+      "first_seen_at": "2026-11-17T16:23:40+08:00",
+      "verified_at": "2026-11-17T16:23:40+08:00",
       "auto_generated": true,
       "verification": "自动收录"
     }
